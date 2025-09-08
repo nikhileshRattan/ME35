@@ -23,9 +23,8 @@ headers = {'Authorization': 'Bearer ' + token}
 response = urequests.get(url, headers=headers)
 
 print(response.status_code)
-# Check if the request was successful
+
 if response.status_code == 200:
-    # Parse the JSON response
     data = response.json()
     print("Response data:", data)
     for rec in data["records"]:
