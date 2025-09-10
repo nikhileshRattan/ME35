@@ -6,3 +6,4 @@ print(mac)
 import ubinascii
 mac_readable = ubinascii.hexlify(mac,":").decode()
 print(mac_readable)
+

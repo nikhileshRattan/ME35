@@ -14,3 +14,4 @@ def wifi_connect():
     print('network config:', sta_if.ipconfig('addr4'))
     
 wifi_connect()
+
