@@ -47,6 +47,6 @@ count = Count(32,39)
 print(count.value())
 
 #setting up motor with encoder
-#Motor1 = Motor(14,27, 32,39)
-#Motor1.pos() # to read the encoder value for Motor 1
+Motor1 = Motor(14,27, 32,39)
+Motor1.pos() # to read the encoder value for Motor 1
 

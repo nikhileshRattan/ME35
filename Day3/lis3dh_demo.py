@@ -17,10 +17,11 @@ def demo():
                   .format(accl_raw['x'], accl_raw['y'], accl_raw['z']))
             
             # Read acceleration data in g units
-            accl_g = h3lis331dl.read_accl_g()
-            print("Accel: AX = {0:6.3f}g AY = {1:6.3f}g AZ = {2:6.3f}g"
-                  .format(accl_g['x'], accl_g['y'], accl_g['z']))
-            
+            accl_g = h3lis331dl.read_accl_g()['x']
+            print(accl_g)
+            # print("Accel: AX = {0:6.3f}g AY = {1:6.3f}g AZ = {2:6.3f}g"
+            #      .format(accl_g['x'], accl_g['y'], accl_g['z']))
+            #
             time.sleep(0.5)
             
     except KeyboardInterrupt:
@@ -30,3 +31,9 @@ def demo():
 
 
 demo()
+data = []
+
+def buttonpressed():
+    global data
+    accl_g = h3lis331dl.read_accl_g()['x']
+    data.append(accl_g)

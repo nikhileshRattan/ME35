@@ -1,4 +1,5 @@
 from machine import Pin, PWM, Timer
+import time
 
 class Count(object):
     def __init__(self,A,B):
@@ -82,6 +83,9 @@ class Motor(Count):
 #print(count.value())
 
 #setting up motor with encoder
-#Motor1 = Motor(14,27, 32,39)
-#Motor1.pos() # to read the encoder value for Motor 1
+Motor1 = Motor(14,27, 32,39)
+Motor1.pos() # to read the encoder value for Motor 1
+while True:
+    print(Motor1.pos())
+    time.sleep(0.2)
 
